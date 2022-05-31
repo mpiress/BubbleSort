@@ -20,6 +20,7 @@ struct Vector{
 void Initialize(Vector *v);
 void Imprime(Vector *v);
 void Swap(int *a, int *b);
+
 void RecursiveBubbleSort(Vector *v, int n);
 void InterativeBubbleSort(Vector *v);
 

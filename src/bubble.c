@@ -31,8 +31,8 @@ void RecursiveBubbleSort(Vector *v, int n){
 		return;
 
 	for(int i=0; i<n; i++)
-		if(v->itens[i] > v->itens[i+1]){
-			Swap(&v->itens[i], &v->itens[i+1]);
+		if(v->itens[i] > v->itens[n]){
+			Swap(&v->itens[i], &v->itens[n]);
 			v->swap ++;
 		}
 
@@ -42,10 +42,10 @@ void RecursiveBubbleSort(Vector *v, int n){
 
 void InterativeBubbleSort(Vector *v) {
     
-    for(int i=1; i<MAXSIZE; i++){ 
-        for(int j=0; j<MAXSIZE-i; j++) 
-            if(v->itens[j] > v->itens[j+1]){
-				Swap(&v->itens[j], &v->itens[j+1]);
+    for(int i=MAXSIZE-1; i>=0; i--){ 
+    	for(int j=0; j<i; j++) 
+            if(v->itens[j] > v->itens[i]){
+				Swap(&v->itens[j], &v->itens[i]);
 				v->swap ++;
 			}
 
